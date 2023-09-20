@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import BlockDetail from './BlockDetail';
 import Saldo from './Saldo';
+import TransactionDetail from './TransactionDetail';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
             <li className="nav-item">
               <Link to="/blockdetail" className="nav-link">BlockDetail</Link>
             </li>
+            <li className='nav-item'>
+              <Link to="/tdetail" className="nav-link">Transaction Detail</Link>
+            </li>
             <li className="nav-item">
               <Link to="/saldo" className="nav-link">Saldo</Link>
             </li>
@@ -21,6 +25,9 @@ function App() {
         <Switch>
           <Route path="/blockdetail">
             <BlockDetail />
+          </Route>
+          <Route path="/tdetail">
+            <TransactionDetail/>
           </Route>
           <Route path="/saldo">
             <Saldo />
